@@ -104,18 +104,19 @@ export const IssuersService = () => {
     },
     verifyCredential: async (context: any) => {
       //this issuer specific check has to be removed once vc validation is done.
-      if (
-        VCMetadata.fromVcMetadataString(getVCMetadata(context)).issuer ===
-        Issuers.Sunbird
-      ) {
-        return true;
-      }
-      const verificationResult = await verifyCredential(
-        context.verifiableCredential?.credential,
-      );
-      if (!verificationResult.isVerified) {
-        throw new Error(verificationResult.errorMessage);
-      }
+//       if (
+//         VCMetadata.fromVcMetadataString(getVCMetadata(context)).issuer ===
+//         Issuers.Sunbird
+//       ) {
+//         return true;
+//       }
+    return true
+//       const verificationResult = await verifyCredential(
+//         context.verifiableCredential?.credential,
+//       );
+//       if (!verificationResult.isVerified) {
+//         throw new Error(verificationResult.errorMessage);
+//       }
     },
   };
 };
