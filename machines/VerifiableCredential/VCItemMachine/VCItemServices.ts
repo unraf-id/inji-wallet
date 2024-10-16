@@ -103,6 +103,7 @@ export const VCItemServices = model => {
       );
     },
     requestBindingOTP: async context => {
+       context.vcMetadata.id=context.verifiableCredential?.credential?.credentialSubject?.HANDLE||"000987698"
       const vc = VCMetadata.fromVC(context.vcMetadata).isFromOpenId4VCI()
         ? context.verifiableCredential.credential
         : context.verifiableCredential;
