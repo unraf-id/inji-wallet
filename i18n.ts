@@ -3,7 +3,6 @@ import * as Localization from 'expo-localization';
 import {initReactI18next} from 'react-i18next';
 
 import en from './locales/en.json';
-import fil from './locales/fil.json';
 import ar from './locales/ara.json';
 import hi from './locales/hin.json';
 import kn from './locales/kan.json';
@@ -16,7 +15,7 @@ import Keychain from 'react-native-keychain';
 import {getItem} from './machines/store';
 import {LocalizedField} from './machines/VerifiableCredential/VCMetaMachine/vc';
 
-const resources = {en, fil, ar, hi, kn, ta,spa};
+const resources = {en, ar, hi, kn, ta,spa};
 const locale = Localization.locale;
 const languageCodeMap = {} as {[key: string]: string};
 
