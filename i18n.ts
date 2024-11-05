@@ -21,7 +21,7 @@ const languageCodeMap = {} as {[key: string]: string};
 
 export const SUPPORTED_LANGUAGES = {
   en: 'English',
-  spa: 'Spanish'
+  spa: 'Española'
 };
 
 i18next
